@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinForms101_Localization.MainPage"
+             xmlns:localalize="clr-namespace:XamarinForms101_Localization.Strings"
+             >
+
+    <Grid RowDefinitions="Auto,*">
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="{x:Static localalize:AppStringResources.WelcomeToXamarinForms}" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <StackLayout Margin="30" Grid.Row="1" Spacing="20">
+            <Label Text="{x:Static localalize:AppStringResources.StartDevelop}" FontSize="Title" />
+            <Label Text="{x:Static localalize:AppStringResources.MakeChanges}" FontSize="16" />
+            <Label FontSize="16">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="{x:Static localalize:AppStringResources.LearnMore}"/>
+                            <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Button Text="{x:Static localalize:AppStringResources.ShowAlert}" x:Name="btnShowAlert" Clicked="btnShowAlert_Clicked" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
